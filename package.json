@@ -1,0 +1,12 @@
+{
+  "name": "myfirstweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "live-serve": "browser-sync start --proxy \"localhost\" --files \"*\""
+  },
+  "author": "Wayne",
+  "license": "MIT"
+}

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.container>.sidebar-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #00000050;
+    transition: 3s;
+}
+
+.container>.sidebar-container>.sidebar {
+    position: relative;
+    left: 0;
+    width: 420px;
+    border-right: 2px solid orangered;
+    background-color: #000000;
+    height: 100vh;
+    transition: 1s;
+    overflow-x: hidden;
+}
+
+.container>.sidebar-container>.sidebar>.logo{
+    font-family: monospace;
+    font-size: 25px;
+    margin-left: 20%;
+    padding-top: 20px;
+}
+
+.container>.sidebar-container>.sidebar>.buttons{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px;
+}
+
+.container>.sidebar-container>.sidebar>.buttons>div{
+    height: 40px;
+    width: 120px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.container>.sidebar-container>.sidebar>.buttons>div:active{
+    opacity: .5;
+}
+.container>.sidebar-container>.sidebar>.buttons>div:nth-child(2){
+    border: 3px solid white;
+    color: white;
+    background-color: black;
+}
+
+.main>.header {
+    height: 80px;
+    background-color: teal;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.main>.header>.label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main>.header>.hamburger {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+.main>.header>.hamburger:hover{
+    opacity: .2;
+}
