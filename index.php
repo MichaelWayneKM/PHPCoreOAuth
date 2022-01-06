@@ -31,10 +31,10 @@
 
         <div class="sidebar-container">
             <div class="sidebar">
-                <div class="logo" style="color: white;">My First Website</div>
+                <div class="logo" style="color: white;"></div>
                 <div class="buttons">
-                    <a href="/login.php"><div class="login">Login</div></a>
-                    <a href="/register.php"><div class="signup">Register</div></a>
+                    <div class="login"><a href="/auth/login.php">Login</a></div>
+                    <div class="signup"><a href="/auth/register.php">Register</a></div>
                 </div>
                 <div>
                     <img style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid white;" src="http://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" alt="user">
@@ -42,7 +42,12 @@
             </div>
         </div>
     </div>
-    <script>
+    <script type="module">
+        import {globalx} from "./js/globals.js"
+        
+        const titles = ["title", ".logo", ".label"]
+        for(const x of titles) {document.querySelector(x).innerHTML = globalx.webName}
+
         const hamburger = document.querySelector(".hamburger");
         const sidebar = document.querySelector(".sidebar");
         const sidebarContainer = document.querySelector(".sidebar-container")
